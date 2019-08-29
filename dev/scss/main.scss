@@ -13,7 +13,7 @@
 
 body {
 	min-width: 320px;
-	font-family: 'AkrobatBold';
+	font-family: AkrobatBold;
 }
 
 button:active,
@@ -149,9 +149,18 @@ input:focus {
 			padding: 5px 15px;
 		}
 	}
-}
 
-@media screen and (max-width: 1024px) {
+	.phone {
+		padding: 0;
+		& span:first-child {
+			display: inline-block;
+		}
+
+		& span:last-child {
+			display: none;
+		}
+	}
+
 	.header {
 		.container {
 			justify-content: flex-end;
@@ -238,17 +247,6 @@ input:focus {
 			border-radius: 50px;
 		}
 	}
-
-	.phone {
-		padding: 0;
-		& span:first-child {
-			display: inline-block;
-		}
-
-		& span:last-child {
-			display: none;
-		}
-	}
 }
 
 @media screen and (max-width: 768px) {
@@ -313,21 +311,6 @@ input:focus {
 		a.btn.btn__blue-br {
 			display: none;
 		}
-
-		// .menu-item {
-		// 	a.btn.btn__blue-br {
-		// 		display: block;
-		// 		width: 100%;
-		// 		height: 100%;
-		// 		span {
-		// 			display: block;
-		// 			color: #fff;
-		// 			width: 100%;
-		// 			height: 100%;
-		// 			display: block;
-		// 		}
-		// 	}
-		// }
 	}
 }
 
@@ -413,6 +396,10 @@ input:focus {
 // banner section ----------------------------------------------------------------------
 .banner {
 	background-color: #F2F5F7;
+	max-height: 602px;
+	.slick-list {
+		overflow: hidden;
+	}
 	&-item {
 		background-image: url('../images/illustration-banner.png');
 		background-position: right;
@@ -1247,6 +1234,7 @@ textarea::placeholder {
 }
 
 .add-info {
+	margin-bottom: 100px;
 	text-align: center;
 	span {
 		color: #ff7e00;
