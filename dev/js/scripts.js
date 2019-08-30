@@ -146,10 +146,10 @@ $(function(){
 // input value from catalog item to form ------------------------------
 
 $(".catalog-item_bye").click(function(e) {
-  var title = $(this).prev().find("h3").text();
-  var price = $(this).prev().find(".price_int").text();
-  var priceCoins = $(this).prev().find(".price_frac").text();
-  var backetImg = $(this).prev().prev().find("img").attr("src");
+  var title = $(this).parent().find("h3").text();
+  var price = $(this).parent().find(".price_int").text();
+  var priceCoins = $(this).parent().find(".price_frac").text();
+  var backetImg = $(this)parent().find("img").attr("src");
   $(".backet_title").html(title);
   $(".backet_price .price_int").html(price);
   $(".backet_price .price_frac").html(priceCoins);
@@ -157,4 +157,4 @@ $(".catalog-item_bye").click(function(e) {
 });
 
 
-document.addEventListener('touchstart', onTouchStart, {passive: true});
+// document.addEventListener('touchstart', onTouchStart, {passive: true});
